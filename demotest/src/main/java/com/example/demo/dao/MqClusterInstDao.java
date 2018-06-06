@@ -14,7 +14,7 @@ public class MqClusterInstDao {
     MqClusterInstMapper mqClusterInstMapper;
    public  List<MqClusterInst> selectByExampleWithBLOBs(){
        MqClusterInstExample example = new MqClusterInstExample();
-       example.createCriteria().andClusterNameIsNull();
+       example.createCriteria().andClusterNameIsNotNull();
        return mqClusterInstMapper.selectByExample(example);
    }
 
